@@ -1,0 +1,133 @@
+
+/* --- Full-screen stylish tech background (fixed) --- */
+body{
+  background-image: url('assets/tech_bg_hd.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+}
+/* Reduce contrast over background for readability */
+.section, .site-header, .site-footer, .card, .contact-form, .project-card{
+  background-color: rgba(6,8,18,0.65);
+  backdrop-filter: blur(6px) saturate(120%);
+}
+:root.light .section, :root.light .site-header, :root.light .site-footer, :root.light .card, :root.light .contact-form, :root.light .project-card{
+  background-color: rgba(255,255,255,0.8);
+}
+
+
+/* --- Tiled tech watermark background --- */
+body::before{
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url('ABCD.png');
+  background-size: 420px 420px;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  opacity: 0.08;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Deepak Portfolio - Style */
+:root{
+  --bg: #0b1220;
+  --panel: #0f172a;
+  --muted: #94a3b8;
+  --text: #e5e7eb;
+  --brand: #60a5fa;
+  --accent: #a78bfa;
+  --card: #111827;
+  --ring: rgba(96,165,250,0.4);
+}
+:root.light{
+  --bg: #ffffff;
+  --panel: #f8fafc;
+  --muted: #475569;
+  --text: #0f172a;
+  --brand: #2563eb;
+  --accent: #7c3aed;
+  --card: #ffffff;
+  --ring: rgba(37,99,235,0.25);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:var(--text);scroll-behavior:smooth}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+.container{width:min(1100px,92%);margin-inline:auto}
+.section{padding:84px 0}
+.section.alt{background:linear-gradient(180deg, transparent, rgba(255,255,255,0.03))}
+/* Header */
+.site-header{position:sticky;top:0;z-index:50;background:rgba(10,12,20,0.6);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid rgba(255,255,255,0.05)}
+:root.light .site-header{background:rgba(255,255,255,0.75)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px}
+.brand{font-weight:800;letter-spacing:0.3px;font-size:1.2rem}
+.nav-menu{display:flex;align-items:center;gap:18px}
+.nav-menu a{opacity:0.9;padding:8px 10px;border-radius:10px}
+.nav-menu a:hover{background:rgba(255,255,255,0.06)}
+.theme-toggle{border:1px solid rgba(255,255,255,0.15);background:transparent;color:var(--text);padding:8px 10px;border-radius:10px;cursor:pointer}
+.hamburger{display:none;flex-direction:column;gap:4px;background:transparent;border:0;cursor:pointer}
+.hamburger span{display:block;width:24px;height:2px;background:var(--text)}
+/* Hero */
+.hero{padding-top:96px}
+.hero-grid{display:grid;grid-template-columns:1.3fr 1fr;align-items:center;gap:32px}
+.eyebrow{opacity:0.7;letter-spacing:2px;text-transform:uppercase;font-size:0.85rem}
+.hero h1{font-size:clamp(2.4rem, 5.5vw, 4rem);margin:6px 0}
+.tagline{font-weight:600;color:var(--brand);margin-top:-8px}
+.summary{color:var(--muted);max-width:60ch}
+.cta{display:flex;gap:12px;margin:18px 0 10px}
+.btn{display:inline-block;padding:12px 16px;border-radius:12px;border:1px solid rgba(255,255,255,0.15);transition:transform .05s ease;will-change:transform}
+.btn:hover{transform:translateY(-1px)}
+.btn.primary{background:linear-gradient(135deg,var(--brand),var(--accent));border:0;color:white}
+.btn.ghost{background:transparent}
+.btn.small{padding:8px 12px;border-radius:10px;font-size:0.9rem}
+.socials{display:flex;gap:14px;margin-top:12px}
+.hero-photo{justify-self:end;position:relative}
+.hero-photo img{width:min(360px,90vw);border-radius:24px;box-shadow:0 20px 80px rgba(0,0,0,0.35);border:1px solid rgba(255,255,255,0.1)}
+/* About */
+.two-col{display:grid;grid-template-columns:1.2fr 1fr;gap:26px;align-items:start}
+.about-cards{display:grid;gap:16px}
+.card{background:var(--card);border:1px solid rgba(255,255,255,0.08);padding:18px;border-radius:16px}
+.card h4{margin:0 0 8px 0}
+.card ul{margin:0;padding-left:18px;color:var(--muted)}
+/* Skills */
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-top:12px}
+.skill{border:1px dashed rgba(255,255,255,0.15);border-radius:12px;padding:12px;text-align:center;background:rgba(255,255,255,0.02)}
+/* Projects */
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.project-card{background:var(--card);border:1px solid rgba(255,255,255,0.08);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.project-content{padding:14px 14px 18px}
+.project-content h4{margin:6px 0 6px}
+.project-content p{margin:0 0 12px 0;color:var(--muted)}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+.tags span{font-size:0.8rem;border:1px solid rgba(255,255,255,0.12);padding:4px 8px;border-radius:999px}
+/* Contact */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:26px;align-items:start}
+.contact-list{list-style:none;padding:0;margin:0;color:var(--muted)}
+.contact-form{background:var(--card);border:1px solid rgba(255,255,255,0.08);padding:18px;border-radius:16px}
+.field{display:flex;flex-direction:column;gap:8px;margin-bottom:12px}
+input,textarea{padding:12px;border-radius:12px;border:1px solid rgba(255,255,255,0.15);background:transparent;color:var(--text);outline:none}
+input:focus,textarea:focus{box-shadow:0 0 0 4px var(--ring);border-color:transparent}
+.form-note{color:var(--muted);font-size:0.9rem;margin-top:6px}
+/* Footer */
+.site-footer{border-top:1px solid rgba(255,255,255,0.08);padding:22px 0;background:rgba(255,255,255,0.02)}
+.foot{display:flex;align-items:center;justify-content:space-between;gap:16px}
+.foot a{opacity:0.85}
+/* Responsive */
+@media (max-width: 900px){
+  .hero-grid{grid-template-columns:1fr;gap:18px}
+  .two-col{grid-template-columns:1fr}
+  .contact{grid-template-columns:1fr}
+  .hero-photo{justify-self:start}
+  .nav-menu{display:none;position:absolute;top:64px;right:8px;background:var(--panel);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:8px;flex-direction:column;min-width:200px}
+  .nav-menu.open{display:flex}
+  .hamburger{display:flex}
+}
+/* Light-mode tweaks */
+:root.light .nav-menu a:hover{background:rgba(0,0,0,0.04)}
+:root.light .card,
+:root.light .contact-form,
+:root.light .project-card{border-color:rgba(0,0,0,0.08)}
+:root.light .skill{background:rgba(0,0,0,0.02);border-color:rgba(0,0,0,0.12)}
